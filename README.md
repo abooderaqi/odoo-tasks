@@ -1,9 +1,9 @@
 # odoo-tasks
 
 # 🎯 Task Title 02:
-## "Customize Workflow for Internal Purchase Request Approval"
+### "Customize Workflow for Internal Purchase Request Approval"
 
-# ✅ Task Description:
+## ✅ Task Description:
 Create or modify a workflow for an Internal Purchase Request module so that it goes through a multi-step approval process before being fully approved.
 
 The stages should be:
@@ -16,7 +16,7 @@ Waiting for Finance Approval – After the manager approves.
 
 Approved – Final approval by the finance team.
 
-# 🎯 Learning Objectives:
+## 🎯 Learning Objectives:
 The intern should:
 
 Understand how to use and manage state fields in models.
@@ -33,9 +33,20 @@ Build a functional form and tree view.
 
 Optionally, use sequences to auto-generate request references.
 
+____
+
 
 # 🎯 Task Title 03:
-## working with team using git and github `TechSkills`
+### Collaborating with a Team Using Git & GitHub `(TechSkills)`
 
-# ✅ Task Description:
-add new branch called `Task02` and put the code for task 02 on it
+## ✅ Task Description:
+Create a new Git branch named Task02 and push the code for Task 02 to that branch on GitHub. Follow Git best practices and provide all the commands you used during the process.
+
+## 🧪 Deliverables:
+A working branch on GitHub named Task02 containing Task 02 code.
+
+A list of all Git commands used, written clearly below.
+
+## 💻 Git Commands Used:
+```bash
+```
