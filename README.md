@@ -1,5 +1,3 @@
-# odoo-tasks
-
 # 🎯 Task Title 02:
 ### "Customize Workflow for Internal Purchase Request Approval"
 
