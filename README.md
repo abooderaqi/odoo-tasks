@@ -7,6 +7,13 @@
 
 ___
 
+
+# 🎯 Task Title 01: ![Done](https://img.shields.io/badge/status-done-brightgreen)
+
+### Basic Python Task: https://github.com/abooderaqi/odoo-tasks/tree/task01
+
+___
+
 # 🎯 Task Title 02: ![Done](https://img.shields.io/badge/status-done-brightgreen)
 
 ### "Customize Workflow for Internal Purchase Request Approval"
