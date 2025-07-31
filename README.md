@@ -7,7 +7,8 @@
 
 ___
 
-# 🎯 Task Title 02:
+# 🎯 Task Title 02: ![Done](https://img.shields.io/badge/status-done-brightgreen)
+
 ### "Customize Workflow for Internal Purchase Request Approval"
 
 ## ✅ Task Description:
@@ -43,7 +44,7 @@ Optionally, use sequences to auto-generate request references.
 ____
 
 
-# 🎯 Task Title 03:
+# 🎯 Task Title 03: ![Progress](https://img.shields.io/badge/status-in--progress-yellow)
 ### Collaborating with a Team Using Git & GitHub `(TechSkills)`
 
 ## ✅ Task Description:
@@ -59,8 +60,9 @@ A list of all Git commands used, written clearly below.
 
 ```
 
+___
 
-# 🎯 Task Title 04:
+# 🎯 Task Title 04: ![New](https://img.shields.io/badge/status-new-blue)
 ### "Add Custom Field to Purchase Order & Transfer to Vendor Bill"
 ## ✅ Task Description:
 Add a new custom field (e.g. `Purchase Purpose`) to both the Purchase Order and the Vendor Bill (Invoice).
@@ -86,8 +88,10 @@ Value properly transferred when creating invoice from Purchase.
 
 Code pushed to GitHub under a new branch named Task04.
 
+___
 
-# 🎯 Task Title 05:
+# 🎯 Task Title 05: ![New](https://img.shields.io/badge/status-new-blue)
+
 ### "Add a Smart Button to View Related Invoices from Purchase Order"
 ## ✅ Task Description:
 Create a smart button on the Purchase Order form view that shows all Vendor Bills (invoices) linked to that purchase order.
@@ -111,8 +115,10 @@ Count is displayed properly.
 
 Code pushed to GitHub under a new branch named Task05.
 
+___
 
-# 🎯 Task Title 06:
+# 🎯 Task Title 06: ![New](https://img.shields.io/badge/status-new-blue)
+
 ### "Create a Server Action to Update a Custom Field on Purchase Orders"
 ## ✅ Task Description:
 Create a custom field (e.g., "Urgency Level" or "Internal Note") on the Purchase Order model. Then, build a Server Action that allows users to update this field to a specific value by selecting it from the Actions dropdown in the form view.
@@ -133,8 +139,10 @@ Server Action updates the field when triggered from the UI.
 
 Code pushed to GitHub under a new branch named Task06.
 
+___
 
-# 🎯 Task Title 07:
+# 🎯 Task Title 07: ![New](https://img.shields.io/badge/status-new-blue)
+
 ### "Create a New Model in Purchase Module and Load Data via XML"
 ## ✅ Task Description:
 Create a new custom model under the Purchase module (e.g., purchase.tags or purchase.category) and pre-load some records into it using a data.xml file.
