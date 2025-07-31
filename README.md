@@ -58,3 +58,99 @@ A list of all Git commands used, written clearly below.
 ```bash
 
 ```
+
+
+# 🎯 Task Title 04:
+### "Add Custom Field to Purchase Order & Transfer to Vendor Bill"
+## ✅ Task Description:
+Add a new custom field (e.g. `Purchase Purpose`) to both the Purchase Order and the Vendor Bill (Invoice).
+
+The field should be filled in the Purchase Order, and when a Vendor Bill is created from the Purchase Order, the value should automatically transfer and appear in the Invoice.
+
+add the field on `account.move` and on `purchase.order` on Form view And On List view
+
+
+## 🎯 Learning Objectives:
+Understand how to extend and inherit Odoo models.
+
+Learn how to override default methods (especially the one creating vendor bills from purchases).
+
+Gain experience working with form views and field visibility.
+
+Reinforce skills in transferring data between related models.
+
+## 🧪 Deliverables:
+Updated module with the new field on Purchase and Invoice.
+
+Value properly transferred when creating invoice from Purchase.
+
+Code pushed to GitHub under a new branch named Task04.
+
+
+# 🎯 Task Title 05:
+### "Add a Smart Button to View Related Invoices from Purchase Order"
+## ✅ Task Description:
+Create a smart button on the Purchase Order form view that shows all Vendor Bills (invoices) linked to that purchase order.
+
+When clicked, the button should open a list view of the related `account.move` records (where the move type is `in_invoice` and the invoice is linked to that Purchase Order).
+
+
+## 🎯 Learning Objectives:
+Learn how to create smart buttons using Odoo form view XML.
+
+Understand how to define custom actions and return views programmatically.
+
+Practice using domain filters and relations between models.
+
+## 🧪 Deliverables:
+Smart button correctly placed on the Purchase Order form.
+
+Clicking the button opens related Vendor Bills.
+
+Count is displayed properly.
+
+Code pushed to GitHub under a new branch named Task05.
+
+
+# 🎯 Task Title 06:
+### "Create a Server Action to Update a Custom Field on Purchase Orders"
+## ✅ Task Description:
+Create a custom field (e.g., "Urgency Level" or "Internal Note") on the Purchase Order model. Then, build a Server Action that allows users to update this field to a specific value by selecting it from the Actions dropdown in the form view.
+
+For example: Set "Urgency Level" to "High" when the Server Action is triggered.
+
+## 🎯 Learning Objectives:
+Learn how to create and modify fields dynamically via server actions.
+
+Understand how to bind server actions to models and make them user-triggered.
+
+Reinforce knowledge of using selection fields and Odoo automation.
+
+## 🧪 Deliverables:
+New field (urgency_level or similar) visible on Purchase Order form.
+
+Server Action updates the field when triggered from the UI.
+
+Code pushed to GitHub under a new branch named Task06.
+
+
+# 🎯 Task Title 07:
+### "Create a New Model in Purchase Module and Load Data via XML"
+## ✅ Task Description:
+Create a new custom model under the Purchase module (e.g., purchase.tags or purchase.category) and pre-load some records into it using a data.xml file.
+
+This task helps you practice creating standalone models and using XML data files for initial content.
+
+## 🎯 Learning Objectives:
+Learn how to define new models in Odoo.
+
+Understand how to preload data using XML files.
+
+Reinforce working with __manifest__.py and data file structure.
+
+## 🧪 Deliverables:
+A fully functional model under the Purchase module.
+
+XML file (data.xml) with at least 3 records loaded on module install.
+
+Code pushed to GitHub under a new branch named Task07.
