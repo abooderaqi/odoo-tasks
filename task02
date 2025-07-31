@@ -1,0 +1,58 @@
+Model class:
+from odoo import models, fields
+
+
+class PurchaseOrder(models.Model):
+    _inherit = 'purchase.order'
+
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('manager_approval', 'Manager Approval'),
+        ('finance_approval', 'Finance Approval'),
+        ('approved', 'Approved'),
+        ('sent', 'RFQ Sent'),
+        ('to approve', 'To Approve'),
+        ('purchase', 'Purchase Order'),
+        ('done', 'Locked'),
+        ('cancel', 'Cancelled')
+    ], string='state', readonly=True, index=True, copy=False, default='draft', tracking=True)
+
+    def action_rfq_send(self):
+        print('inside action_rfq_send', self.state)
+        for rec in self:
+            rec.state = 'sent'
+
+    def action_draft(self):
+        for rec in self:
+            rec.state = 'draft'
+
+    def action_manager_approve(self):
+        for rec in self:
+            rec.state = 'manager_approval'
+
+    def action_finance_approve(self):
+        for rec in self:
+            rec.state = 'finance_approval'
+
+    def action_approved(self):
+        for rec in self:
+            rec.state = 'approved'
+
+
+Security xml:
+<odoo>
+    <record id="purchase_manager_group" model="res.groups">
+        <field name="name">Purchase Manager</field>
+    </record>
+    <record id="purchase_finance_group" model="res.groups">
+        <field name="name">Purchase Finance</field>
+    </record>
+</odoo>
+
+
+Security:
+access_purchase_order,access_purchase_order,model_purchase_order,app_one.purchase_manager_group,1,1,1,1
+access_purchase_order_custom,purchase.order custom,model_purchase_order,app_one.purchase_finance_group,1,1,1,1
+access_purchase_order_custom,purchase.order custom,model_purchase_order,base.group_user,1,0,0,0
+
+
