@@ -169,3 +169,42 @@ A fully functional model under the Purchase module.
 XML file (data.xml) with at least 3 records loaded on module install.
 
 Code pushed to GitHub under a new branch named Task07.
+
+___
+
+# 🎯 Task Title 08: ![New](https://img.shields.io/badge/status-new-blue)
+### "Use @api.depends and @api.onchange to Compute and Update Fields"
+## ✅ Task Description:
+Add a new field called total_product_qty (Float) to the Purchase Order model.
+
+This field should compute the total quantity of all products in the order lines (order_line.product_qty).
+
+Use @api.depends to automatically recompute this value when lines are added/modified.
+
+Create another field called note_based_on_qty (Char).
+
+Use @api.onchange to set a note dynamically:
+
+If total quantity > 100 → note is "Large Order"
+
+If between 50–100 → note is "Medium Order"
+
+Else → note is "Small Order"
+
+## 🎯 Learning Objectives:
+Learn how to define computed fields using @api.depends.
+
+Understand @api.onchange and how it differs from computed fields.
+
+Practice logic branching in Python based on computed values.
+
+Reinforce Odoo UI interaction using onchange updates.
+
+## 🧪 Deliverables:
+total_product_qty computed field correctly calculating quantity sum.
+
+note_based_on_qty updated dynamically when lines are changed.
+
+Fields are visible in the Purchase Order form view.
+
+Code pushed to GitHub under a branch named Task08.
