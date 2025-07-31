@@ -1,0 +1,117 @@
+<odoo>
+    <!-- List View -->
+    <record id="property_view_list" model="ir.ui.view">
+        <field name="name">property list</field>
+        <field name="model">property</field>
+        <field name="arch" type="xml">
+            <list class="header_custom">
+                <field name="name"/>
+                <field name="date_available"/>
+                <field name="owner_id"/>
+                <field name="tag_id" widget="many2many_tags"/>
+                <field name="selling_price"/>
+                <field name="garden"/>
+                <field name="living_area"/>
+                <field name="facades"/>
+                <field name="postcode"/>
+                <field name="status"/>
+                <field name="garden_area" optional="1"/>
+                <field name="bedrooms" optional="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="property_view_form" model="ir.ui.view">
+        <field name="name">property form</field>
+        <field name="model">property</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <header>
+                        <button name="action_draft" type="object" class="btn-primary" string="Set To Draft"
+                                invisible="status == 'draft'"/>
+                        <button name="action_pending" type="object" class="btn-secondary" string="Pending"
+                                invisible="status != 'draft'"/>
+                        <button name="action_sold" type="object" class="btn-success" string="Sold"
+                                invisible="status != 'pending'"/>
+                        <field name="status" widget="statusbar"/>
+                    </header>
+                    <div>
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="General Info">
+                            <field name="postcode"/>
+                            <field name="date_available" required="1"/>
+                            <field name="expected_price" required="1"/>
+                            <field name="selling_price"/>
+                            <field name="diff"/>
+                        </group>
+                        <group string="Additional Info">
+                            <field name="owner_id"/>
+                            <field name="owner_phone"/>
+                            <field name="owner_address"/>
+                            <field name="tag_id" widget="many2many_tags"/>
+                            <field name="garden"/>
+                            <field name="garage"/>
+                            <field name="bedrooms"/>
+                            <field name="living_area"/>
+                        </group>
+                        <group>
+                            <field name="description" required="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Bedrooms">
+                                <field name="property_line_id">
+                                    <list editable="bottom">
+                                        <field name="area"/>
+                                        <field name="description"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <!-- filter  -->
+    <record id="property_view_search" model="ir.ui.view">
+        <field name="name">property search</field>
+        <field name="model">property</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="postcode"/>
+
+                <filter name="is_garden" string="With Garden" domain="[('garden','=',True)]"/>
+                <filter name="is_not_garden" string="Without Garden" domain="[('garden','=',False)]"/>
+                <filter name="is_garage" string="With Garage" domain="[('garage','=',True)]"/>
+
+                <filter name="group_garden" string="Garden" context="{'group_by':'garden'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="property_action" model="ir.actions.act_window">
+        <field name="name">Real Estate</field>
+        <field name="res_model">property</field>
+        <field name="view_mode">list,form</field> <!-- Add view_mode field -->
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem
+            id="property_menu_item"
+            name="properties"
+            parent="properties_menu"
+            action="property_action"
+    />
+</odoo>
