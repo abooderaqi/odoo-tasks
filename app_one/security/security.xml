@@ -1,8 +1,0 @@
-<odoo>
-    <record id="purchase_manager_group" model="res.groups">
-        <field name="name">Purchase Manager</field>
-    </record>
-    <record id="purchase_finance_group" model="res.groups">
-        <field name="name">Purchase Finance</field>
-    </record>
-</odoo>
